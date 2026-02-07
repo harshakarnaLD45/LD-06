@@ -1,0 +1,272 @@
+.bloghoverContainer {
+    margin-top: 0px !important;
+    margin-bottom: 2vw !important;
+}
+
+.blogdetailedcontainer {
+    margin-top: 80px !important;
+}
+
+.blog-image {
+    /* position: relative !important;  */
+    top: -12px !important;
+    border-radius: 6px !important;
+}
+
+.blog-items {
+    padding-top: 30px;
+}
+
+/*  */
+@media (max-width: 2720px) {
+    .blog-image {
+        position: absolute !important;
+        height: 300px !important;
+        max-width: 480px !important;
+        object-fit: contain !important;
+        top: -20px !important;
+        /* border-radius: 12px !important; */
+    }
+}
+
+/*  */
+
+@media (max-width: 1980px) {
+
+    .blog-image {
+        max-height: 300px !important;
+        object-fit: cover !important;
+        top: -27px !important;
+
+
+    }
+
+}
+
+/*  */
+
+@media (max-width: 1541px) {
+
+
+    .blog-image {
+        max-height: 240px !important;
+        width: 250px !important;
+        object-fit: contain;
+        z-index: 10 !important;
+        top: 5px !important;
+
+    }
+}
+
+/*  */
+@media (max-width: 1251px) {
+    .blog-img-sec {
+        margin: 0px !important;
+        margin-right: 40px !important;
+    }
+
+    .bigimage {
+        width: 250px !important;
+
+
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .bigimage {
+        width: 250px !important;
+    }
+
+    .blog-img-sec {
+        min-width: 25% !important;
+
+    }
+
+    .bigtitle {
+        font-size: 20px !important;
+        width: 90% !important;
+        margin: 0px !important;
+    }
+
+}
+
+
+@media (max-width: 1024px) {
+
+    .blog-date {
+        display: none !important;
+    }
+
+    .blog-main-container {
+        min-height: 0 !important;
+    }
+
+    .blog-mobile-date {
+        display: block !important;
+    }
+
+    .blog-image {
+        position: relative !important;
+        display: block !important;
+        /* width: 100% !important; */
+        /* top: 5px !important; */
+        height: 100% !important;
+        max-height: 150px !important;
+    }
+
+    .blog-green-arrow {
+        display: block !important;
+        width: 10% !important;
+
+    }
+
+    .title-arrow {
+        display: block !important;
+    }
+
+    .bigtitle {
+        display: block !important;
+    }
+
+
+}
+
+/*  */
+@media (max-width: 899px) {
+    .blog-items {
+        padding-top: 0px !important;
+        margin: 0px !important;
+    }
+}
+
+/*  */
+
+@media (max-width: 768px) {
+    .blogdetailedcontainer {
+        margin-top: 40px !important;
+    }
+
+    .tablecontentsection {
+        height: 60px !important;
+    }
+        /* .blog-image {
+            height: fit-content !important;
+            max-height: 100px !important;
+        } */
+}
+
+@media (max-width: 600px) {
+
+    /* .blog-image {
+    max-width: 100%;
+    left: 5%;
+  } */
+    .blog-main-container {
+        gap: 10px !important;
+        min-height: 0 !important;
+    }
+
+    .blog-image {
+        width: 100%  !important;
+        height: 100px !important;
+        /* margin-right: 10px !important; */
+        object-fit: cover !important;
+        /* min-width: ; */
+    }
+
+    .blog-img-sec {
+        min-width: none !important;
+        margin: 0px !important;
+        width: 100px  !important;
+    }
+
+    .bigtitle {
+        font-size: 16px !important;
+
+    }
+
+    .blog-green-arrow {
+        width: 10% !important;
+    }
+
+    .title-text {
+        font-size: 15px !important;
+    }
+
+    .arrowbig {
+        display: flex;
+        align-self: flex-start;
+        width: 100% !important;
+    }
+
+    .whatsmiddletext {
+        width: 90% !important;
+    }
+
+    .blog-img-sec {
+
+        margin: 0px !important;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    .bigtitle {
+        font-size: 13px !important;
+    }
+
+    .title-text {
+        font-size: 12px !important;
+    }
+
+    .title-date {
+
+        font-size: 8px !important;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .title-text {
+        font-size: 10px !important;
+    }
+
+    .bigtitle {
+        font-size: 10px !important;
+    }
+
+    .blog-mobile-date {
+        font-size: 8px !important;
+    }
+
+    .blog-img-sec {
+        min-width: none !important;
+        width: 35% !important;
+    }
+}
+
+
+@media (max-width: 340px) {
+    .whatsnewcontainer {
+        display: block;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .whatsmiddletext {
+        font-size: 10px !important;
+
+    }
+
+    .title-date {
+        font-size: 6px !important;
+
+    }
+
+    .title-text {
+        font-size: 8px !important;
+    }
+
+}

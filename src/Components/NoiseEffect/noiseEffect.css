@@ -1,0 +1,24 @@
+.ripple-overlay {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    z-index: 2; /* keep behind interactive UI; adjust if needed */
+  mix-blend-mode: screen; /* subtle blend */
+  opacity: 0.6; /* soften the overall effect */
+  transition: opacity 260ms ease;
+}
+
+/* reduce visual intensity on small devices automatically */
+@media (max-width: 768px) {
+  .ripple-overlay {
+    opacity: 0.35;
+  }
+}
+

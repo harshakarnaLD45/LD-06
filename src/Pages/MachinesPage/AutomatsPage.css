@@ -1,0 +1,304 @@
+.machines-container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.machines-container {
+  padding: 0px 50px;
+  margin-top: 5vw;
+  width: 70%;
+
+}
+
+.download-btn {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: 2px solid #525252;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.machineLayoutContainer {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.machineButton {
+  position: absolute;
+  background-color: #f0f0f0;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.max-mac-img {
+  max-width: 400px;
+  height: auto;
+}
+
+.solutuons-sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2;
+}
+
+.secltion-subsec {
+  width: 40%;
+}
+
+.solution-card-sec {
+  flex-direction: row;
+  height: 420px;
+}
+
+.css-1hqdth1-MuiTabs-list {
+  display: flex !important;
+  gap: 30px !important;
+}
+
+input[type="radio" i] {
+  /* align-items: flex-start !important; */
+  margin-top: 3px !important;
+  /* width: 23px !important;
+    height: 23px !important; */
+}
+
+@media (min-width: 2000px) {
+  .policy-div {
+    align-items: flex-start !important;
+  }
+  #policy-radio{
+    width: 20px !important ;
+    height: 20px !important;
+
+    margin-top: 7px !important;
+  }
+  
+  input[type="radio" i] {
+    /* align-items: flex-start !important; */
+    margin-top: 0px !important;
+    width: 23px !important;
+    height: 23px !important;
+  }
+  
+}
+
+@media (max-width: 2000px) {
+  .policy-div {
+    align-items: center !important;
+  }
+  
+  #policy-radio{
+    width: 16px !important ;
+    height: 16px !important;
+  }
+}
+
+
+@media (min-width: 1920px) {
+  .fixedSize{
+    font-size: 17px !important ;
+  }
+}
+@media (min-width: 1300px) {
+  .solution-card-sec {
+    align-items: flex-end;
+  }
+
+}
+
+@media (max-width: 1400px) {
+  .paymenticons {
+    width: 80px;
+    height: 80px;
+  }
+
+  .max-mac-img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .solutuons-sec {
+    display: block;
+    align-items: flex-start;
+  }
+    
+  .secltion-subsec {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .solution-card-sec {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .machines-container {
+    padding: 0px 30px;
+    width: 90%;
+  }
+
+  .paymenticons {
+    width: 70px;
+    height: 70px;
+  }
+
+  .max-mac-img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 899px) {
+
+  .download-btn,
+  .animate-button {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .maintenance-containers {
+    height: 130vh !important;
+  }
+
+  .filter-objects {
+    padding: 10px 30px !important;
+    top: -20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .machines-container {
+    padding: 0px 20px;
+    padding-top: 7rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  .filter-objects {
+    top: -12px !important;
+    font-size: 14px !important;
+  }
+
+  .maruecontainer {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .max-mac-img {
+    max-width: 200px;
+  }
+
+  .policy-radio {
+    margin-top: 5px !important;
+  }
+
+  .policy-div {
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .maintenance-containers {
+    height: 200vh !important;
+  }
+
+  .patner-form-radio {
+    margin-top: -13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .work-benefit-img-sec {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .policy-div {
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .machines-container {
+    padding: 0px 15px;
+    padding-top: 7rem !important;
+    padding-bottom: 5rem !important;
+  }
+  .css-13rd1mj-MuiFormLabel-root-MuiInputLabel-root {
+ white-space: wrap !important;
+      word-break: break-word !important;
+      overflow-wrap : break-word !important;
+          top: -26px !important;
+  }
+
+  .machinelabels {
+    padding: 20px 15px !important;
+  }
+
+  .maruecontainer {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .paymenticons {
+    width: 50px;
+    height: 50px;
+  }
+
+  .custom-icons {
+    min-width: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 426px) {
+  .css-1hqdth1-MuiTabs-list {
+    gap: 0px !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .tab-buttons {
+    width: max-content !important;
+    display: flex !important;
+    align-self: center !important;
+  }
+
+
+}
+
+@media (min-width: 340px) {
+   #policy-radio{
+  margin: 0 !important;}
+}
+@media (max-width: 340px) {
+  .MuiOutlinedInput-input {
+    padding: 10px 16px 10px 10px !important;
+  }
+  .policy-div{
+    margin-top: 35px !important;
+  }
+  .expertise-title{
+    font-size: 27px !important;
+  }
+
+}

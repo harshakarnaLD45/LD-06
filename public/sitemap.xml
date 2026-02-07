@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Pages -->
+  <url><loc>https://vendinaf.com/en/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vendinaf.com/de/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vendinaf.com/fr/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vendinaf.com/pl/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vendinaf.com/es/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+
+  <!-- Machines Page -->
+  <url><loc>https://vendinaf.com/en/machine</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vendinaf.com/de/machine</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vendinaf.com/fr/machine</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vendinaf.com/pl/machine</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vendinaf.com/es/machine</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Maintenance Page -->
+  <url><loc>https://vendinaf.com/en/maintaince</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/de/maintaince</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/fr/maintaince</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/pl/maintaince</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/es/maintaince</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Software Page -->
+  <url><loc>https://vendinaf.com/en/software</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/de/software</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/fr/software</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/pl/software</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/es/software</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Insights Page -->
+  <!-- <url><loc>https://vendinaf.com/en/Insights</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/de/Insights</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/fr/Insights</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/pl/Insights</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/es/Insights</loc><changefreq>weekly</changefreq><priority>0.6</priority></url> -->
+
+  <!-- Blog Container -->
+  <!-- <url><loc>https://vendinaf.com/en/Insights/blog</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://vendinaf.com/de/Insights/blog</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://vendinaf.com/fr/Insights/blog</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://vendinaf.com/pl/Insights/blog</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://vendinaf.com/es/Insights/blog</loc><changefreq>weekly</changefreq><priority>0.5</priority></url> -->
+
+  <!-- About Page -->
+  <url><loc>https://vendinaf.com/en/company/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/de/company/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/fr/company/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/pl/company/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/es/company/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Company Menu Page -->
+  <url><loc>https://vendinaf.com/en/company/menu</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/de/company/menu</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/fr/company/menu</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/pl/company/menu</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendinaf.com/es/company/menu</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Contact Page -->
+  <url><loc>https://vendinaf.com/en/contact</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/de/contact</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/fr/contact</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/pl/contact</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendinaf.com/es/contact</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>

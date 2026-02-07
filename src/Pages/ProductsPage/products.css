@@ -1,0 +1,142 @@
+.gourmate_Heading {
+    margin: 10px 0px !important;
+}
+
+.Tecnical-specification {
+    margin: 0px 0px 0px 10px !important;
+}
+
+#card_content_sec {
+    padding: 0px !important;
+}
+
+.Product_Requirements {
+    gap: 0px !important;
+}
+
+
+
+.accordian_tag{
+    padding: clamp( 5px , 2%, 10px) !important;
+}
+
+
+
+
+
+@media screen and (min-width: 2000px) {
+    .Product_hero_img {
+        width: 100% !important;
+        height: 650px !important;
+    }
+
+    .Product_hero_img_sec {
+        width: 15% !important;
+    }
+
+    .machine_header {
+        margin-top: 30px !important;
+    }
+
+    .hero_sec {
+        min-height: 50vh !important;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .Installation_Child_Safety_sec {
+        flex-direction: column !important;
+    }
+
+   
+
+    .Installation_Child_Safety_sec {
+        width: 100% !important;
+    }
+
+    .product_hero_text {
+        width: 80% !important;
+    }
+    
+    
+    .Installation_Child_Safety_card{
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .product_accordian{
+    width: 100% !important;
+}
+}
+@media screen and (max-width: 550px) {
+
+
+
+
+    .product_hero_text {
+        width: 100% !important;
+    }
+    .operationNumber_sec{
+        width: auto !important;
+    }
+}
+
+@media screen and (max-width: 475px) {
+
+
+    .machine_bubbles_sec {
+        gap: 10px !important;
+    }
+
+    .machine_bubbles {
+        padding: 12px 20px !important;
+        /* font-size: 14px !important; */
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .product_hero_text {
+        width: 100% !important;
+        padding-top: 30px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .product_points_sec {
+        padding: 0px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .hero_sec {
+        min-height: fit-content !important;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .feature_card {
+        padding: 18px !important;
+        gap:40px !important;
+    }
+    .feature_icon_sec{
+        /* height: 40px !important; */
+        width: 30px !important;
+    }
+    .feature_icon{
+        max-width: 40px !important;
+    }
+
+    .machine_bubbles {
+        padding: 10px 15px !important;
+    }
+
+    
+    .Troubleshooting_boxes{
+        padding: 15px !important;
+    }
+
+
+}

@@ -1,0 +1,43 @@
+.span-content {
+    display: flex;
+    color: #C2C2C4;
+    gap: 5px
+}
+
+span {
+    display: contents !important;
+    text-wrap: nowrap !important;
+    font-weight: 600;
+    color: white;
+}
+
+.text-color {
+    color: #C2C2C4;
+}
+
+.imprints-box {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .imprints-container {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .imprints-container {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .imprints-container {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+}

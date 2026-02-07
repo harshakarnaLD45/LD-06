@@ -1,0 +1,287 @@
+.about-page-container {
+    padding: 185px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-container {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    border-top: 1px solid #8D8D8D;
+    justify-content: flex-start;
+}
+
+.responsive-text {
+    font-size: calc(3rem + 3.5vw) !important;
+    white-space: nowrap;
+}
+
+.white-text {
+    color: #FCFCFC;
+    line-height: 120%;
+    letter-spacing: -1.28px;
+}
+
+.green-text {
+    color: #7FEE64;
+    line-height: 120%;
+    letter-spacing: -1.28px;
+}
+
+.star-icon {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+.description1 {
+    display: none;
+}
+
+.team-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.team-card {
+    height: 600px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    position: relative;
+}
+
+.image-person-sec{
+    width: 90%;
+}
+
+.team-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.team-info h3 {
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.team-info p {
+    color: #444;
+    margin: 5px 0 0;
+}
+
+.val-motion-effect {
+    max-width: 24%;
+}
+
+.crads-title-sec {
+    padding: 32px 24px;
+}
+
+.about-naf-img-let {
+    width: 200px;
+}
+
+@media (max-width: 2600px) {
+    .responsive-text {
+        font-size: calc(4.3rem + 3.8vw)!important;
+    }
+
+    .star-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 2000px) {
+    .responsive-text {
+        font-size: calc(3.9rem + 3.5vw)!important;
+    }
+
+    .star-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 1680px) {
+    .responsive-text {
+        font-size: calc(3.2rem + 3.5vw) !important;
+    }
+
+    .star-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .team-grid {
+        margin-top: 1.5rem;
+    }
+
+    .team-card {
+        height: 450px;
+    }
+
+    .about-naf-img-let {
+        width: 150px;
+    }
+}
+
+@media (max-width: 1390px) {
+    .responsive-text {
+        font-size: calc(3.4rem + 2.5vw) !important;
+    }
+
+    .crads-title-sec {
+        padding: 25px 14px;
+    }
+}
+
+
+@media (max-width: 1250px) {
+    .responsive-text {
+        font-size: calc(3.4rem + 2.5vw) !important;
+    }
+
+    .about-container {
+        gap: 2rem;
+    }
+
+    .about-page-container {
+        padding: 125px 30px 30px;
+    }
+
+    .val-motion-effect {
+        max-width: 48%;
+    }
+
+    .crads-title-sec {
+        padding: 20px 14px;
+    }
+
+    .maintenance-containers1 {
+        height: 800px !important;
+    }
+}
+
+@media (max-width: 1140px) {
+    .responsive-text {
+        font-size: calc(2.3rem + 3vw) !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .about-page-container {
+        padding: 100px 20px 30px;
+    }
+
+    .description {
+        display: none;
+    }
+
+    .description1 {
+        display: block;
+    }
+
+    .responsive-text {
+        font-size: calc(2.3rem + 2vw) !important;
+    }
+
+    .star-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .about-naf-img-let {
+        width: 100px;
+    }
+}
+
+@media (max-width: 690px) {
+    .responsive-text {
+        font-size: calc(2rem + 2vw) !important;
+    }
+
+    .team-card {
+        height: 400px;
+    }
+
+    .maintenance-containers1 {
+        height: 660px !important;
+    }
+}
+@media (max-width: 598px) {
+    .responsive-text {
+        font-size: calc(1.7rem + 2vw) !important;
+    }
+
+    .team-card {
+        height: 400px;
+    }
+
+    .maintenance-containers1 {
+        height: 660px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+
+ 
+    .about-container {
+        flex-direction: row;       
+        justify-content: center;
+        gap: 0.75rem;              
+    }
+
+    .val-motion-effect {
+        max-width: 100% !important;
+    }
+   
+    .responsive-text {
+        font-size: calc(1.3rem + 1vw) !important;
+        white-space: nowrap;       
+        line-height: 1.15;
+    }
+
+    
+    .star-icon {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+    }
+
+  
+    .about-page-container {
+        padding: 90px 12px 24px;
+    }
+
+ 
+    .description1 {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+   
+    .about-container video {
+        max-width: 260px;
+    }
+}
+@media (max-width: 375px) {
+    #value_title {
+        font-size: 25px !important;
+}
+}
+@media (max-width: 350px) {
+    .about-naf-img-let {
+        width: 80px;
+    }
+}

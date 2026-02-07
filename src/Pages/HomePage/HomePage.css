@@ -1,0 +1,875 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 99vh;
+  padding: 0px 50px;
+}
+
+.machine-sec-homepage {
+  padding-left: 50px;
+}
+
+.main-sub-container1 {
+  width: 50%;
+}
+
+.button-container {
+  width: 35% !important;
+}
+
+.main-sub-container2 {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  width: 50%;
+}
+
+.fade-word {
+  display: inline-block;
+  opacity: 0;
+  /* will fade in via GSAP */
+}
+
+.explore-container,
+.whatsnewcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.explore-container .main-sub-container1:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.whatnew-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.css-1qw2a80-MuiGrid-root>.MuiGrid-item {
+  padding-top: 16px !important;
+}
+
+.sustain-icons {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+
+}
+
+.sustain-sec {
+  max-width: 40%;
+}
+
+.whoweServe-sec {
+  display: flex;
+}
+
+.whoweServe-left-sec {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.whoweServe-right-sec {
+  width: 50% !important;
+  display: flex;
+  gap: 16px !important;
+
+}
+
+.whoweServe-left-sec2-text {
+  width: 80%;
+}
+
+.whoweServe-right-sec1 {
+  width: 50% !important;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.whoweServe-right-sec2 {
+  padding-top: 15%;
+}
+
+.hover-img {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s;
+}
+
+.blog-container:hover .hover-img {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.05);
+  transition-delay: 0s;
+  pointer-events: auto;
+}
+
+.blog-image {
+  height: 300px;
+}
+
+.Whatimage-container {
+  bottom: -60px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Large Screens (Desktops) */
+@media (max-width: 2720px) {
+  .hover-img {
+    bottom: -163px !important;
+  }
+
+  .testimonial-cards-sec {
+    height: 650px !important;
+  }
+}
+
+@media (min-width: 2500px) {
+
+  .Whatimage-container {
+    bottom: -60px;
+  }
+}
+
+@media (min-width: 2000px) {
+  /* .bigimagecontaiter {
+    bottom: 60px !important;
+  } */
+
+  .hover-img {
+    bottom: -143px !important;
+  }
+}
+
+@media (max-width: 1980px) {
+  .hover-img {
+    bottom: -113px !important;
+  }
+}
+
+@media (max-width: 2000px) {
+  .blog-image {
+    height: 250px;
+  }
+}
+
+@media (min-width: 2170px) {
+  .left-sections {
+    padding-top: 6rem !important;
+  }
+}
+
+@media (min-width: 2135px) {
+  .blog-image {
+    max-width: 420px !important;
+    left: 20% !important;
+  }
+}
+
+@media (min-width: 2135px) {
+  .blog-image {
+    max-width: 420px !important;
+    left: 20% !important;
+  }
+}
+
+@media (min-width: 1850px) {
+  .takeimage {
+    padding-top: 5rem !important;
+  }
+}
+
+@media (max-width: 1850px) {
+  .sustain-icons {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sustainability-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+@media (min-width: 1650px) {
+  .explore {
+    width: 1567px !important;
+  }
+
+  .exploretext {
+    width: 967px !important;
+  }
+
+  .clientText {
+    max-width: 740px !important;
+  }
+}
+
+@media (min-width: 1541px) {
+  .blog-image {
+    max-width: 420px !important;
+    left: 5% !important;
+  }
+}
+
+@media (max-width: 1541px) {
+  .hover-img {
+    bottom: -93px !important;
+  }
+}
+
+@media (max-width: 1440px) {
+
+  .main-sub-container1,
+  .main-sub-container2 {
+    width: 75%;
+  }
+
+  .sustain-sec {
+    max-width: 75%;
+  }
+
+  .whoweServe-left-sec {
+    width: 40%;
+  }
+
+  .whoweServe-right-sec {
+    width: 60% !important;
+  }
+}
+
+@media (max-width: 1350px) {
+  .Whatimage-container {
+    left: 15% !important;
+  }
+
+  .bigimage {
+    width: 350px !important;
+  }
+
+  .sustain-icons {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 1211px) {
+  .bigimage {
+    width: 250px !important;
+  }
+
+  .main-sub-container1,
+  .main-sub-container2 {
+    width: 90%;
+  }
+
+  .hover-img {
+    bottom: 0 !important;
+    position: relative !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bigimage {
+    width: 200px !important;
+  }
+
+  .Title-Category {
+    width: 60% !important;
+  }
+
+  .title-date {
+    display: block !important;
+  }
+
+  .bigtitle {
+    width: 40% !important;
+    margin-left: 4rem !important;
+  }
+
+  .sustain-icons {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sustainability-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .blog-image {
+    height: 100%;
+  }
+
+  .Whatimage-container {
+    bottom: 0px;
+    left: 10% !important;
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 1025px) {
+  .imagestaticwhats {
+    display: none;
+  }
+
+  .arrowtabscreen {
+    display: none;
+  }
+
+  .blog-containerss {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 0px 30px;
+  }
+
+  .machine-sec-homepage {
+    padding-left: 30px;
+  }
+
+  .main-sub-container1,
+  .main-sub-container2 {
+    width: 100%;
+  }
+
+  .main-sub-containerss {
+    width: 90%;
+  }
+
+  .main-sub-container2 {
+    gap: 24px;
+  }
+
+  .smallImages {
+    display: none !important;
+  }
+
+  .explore-container,
+  .whatsnewcontainer {
+    padding-bottom: 2rem !important;
+  }
+
+  .Whatimage-container {
+    display: none;
+  }
+
+  .imagestaticwhats {
+    display: block;
+  }
+
+  .arrowbig {
+    display: none !important;
+  }
+
+  .date {
+    transform: none !important;
+  }
+
+  .arrowbutton {
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px !important;
+    min-height: 60px !important;
+    padding: 20.712px !important;
+    gap: 7.41px !important;
+    border-radius: 23.712px !important;
+  }
+
+  .datebig {
+    display: none !important;
+  }
+
+  .bigimage {
+    display: none !important;
+  }
+
+  .bigimagecontaiter {
+    display: none !important;
+  }
+
+  .bigtitle {
+    display: none !important;
+  }
+
+  .arrowbigscreen {
+    display: none !important;
+  }
+}
+
+/* Small Screens (Mobile Devices) */
+@media (min-width: 961px) {
+  .blog-image {
+    max-width: 300px;
+    left: 10%;
+  }
+}
+
+@media (max-width: 899px) {
+  .sustain-sec {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 960px) {
+  .blog-image {
+    max-width: 280px;
+    left: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 0px 20px;
+  }
+
+  .machine-sec-homepage {
+    padding-left: 20px;
+  }
+
+  .main-sub-container2 {
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  .cardimage {
+    padding-top: 1rem !important;
+  }
+
+  .videobox {
+    border-radius: 9.495px !important;
+  }
+
+  .whoweServe-sec {
+    flex-direction: column;
+  }
+
+  .whoweServe-left-sec,
+  .whoweServe-right-sec {
+    width: 100% !important;
+  }
+
+  .whoweServe-right-sec {
+    padding-top: 2rem !important;
+  }
+}
+
+@media (min-width: 600px) {
+  .imagestaticwhatssmallscreen {
+    display: none;
+  }
+
+  .blog-containerss {
+    flex-direction: row;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .blog-image {
+    max-width: 100%;
+    left: 5%;
+  }
+
+  .title-text {
+    font-size: 15px !important;
+  }
+
+  .imagestaticwhats {
+    display: none;
+  }
+
+  .blog-containerss {
+    flex-direction: column !important;
+  }
+
+  .whatsmiddletext {
+    width: 90% !important;
+  }
+
+  .arrow-container {
+    display: none !important;
+  }
+
+  .arrowtabscreen {
+    display: none;
+  }
+
+  .arrowbig {
+    display: block !important;
+    width: 20% !important;
+    height: 22px !important;
+    aspect-ratio: 16.00/21.33 !important;
+    transform: none !important;
+  }
+
+  .datebig {
+    display: none !important;
+  }
+
+  .bigimage {
+    display: none !important;
+  }
+
+  .bigimagecontaiter {
+    display: none !important;
+  }
+
+  .bigtitle {
+    display: none !important;
+  }
+
+  .arrowbutton {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    padding: 13px !important;
+    gap: 7.41px !important;
+    border-radius: 14px !important;
+  }
+
+  .whoweServe-right-sec {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .whoweServe-right-sec1 {
+    width: 100% !important;
+    height: 1000px !important;
+  }
+
+  .whoweServe-right-sec2 {
+    padding-top: 0% !important;
+  }
+
+  .naf-words {
+    font-size: 20px !important;
+    line-height: -50px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    /* 40.4px */
+    letter-spacing: -0.67px !important;
+  }
+
+}
+
+/* Extra Small Screens (Very Small Devices) */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 0px 15px;
+  }
+
+  .machine-sec-homepage {
+    padding-left: 15px;
+  }
+
+  .title-text {
+    font-size: 12px !important;
+  }
+
+  .title-date {
+
+    font-size: 8px !important;
+  }
+
+  .blog-container {
+    padding: 15px 0 !important;
+  }
+
+  /* .maintext {
+    text-align: center !important;
+  } */
+
+  .whatsnewcontainer {
+    flex-direction: row;
+  }
+
+  .explorebutton {
+    align-self: flex-start !important;
+    padding-bottom: 10px !important;
+  }
+
+  .control-section {
+    border-radius: 18px !important;
+  }
+
+  .sustain-icons {
+    width: 70px;
+    height: 70px;
+  }
+
+  .sustainability-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .explore-container {
+    display: block;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .explore-container .main-sub-container1:last-child {
+    padding: 1rem 0rem;
+  }
+
+  .title-arrow {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .animate-div {
+    width: auto !important;
+  }
+
+  .css-10q1psb {
+    height: 30px !important;
+    width: 30px !important;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .testimonials-section {
+    padding: 40px 20px !important;
+    border-radius: 18px !important;
+    height: 650px !important;
+  }
+
+  .hover-img {
+    border-radius: 6px !important;
+  }
+
+  .title-text {
+    font-size: 10px !important;
+  }
+
+  .left-sections {
+    padding-top: 0px !important;
+  }
+
+  .arrowbig {
+    width: 15% !important;
+    height: 21px !important;
+  }
+
+  .sustain-icons {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sustainability-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .css-9oulna {
+    padding: 10px 0px !important;
+  }
+
+  /*  */
+  .css-8qb8m4 {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 340px) {
+  .whatsnewcontainer {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 24px;
+    margin-bottom: 0 !important;
+  }
+
+  .whatsmiddletext {
+    font-size: 10px !important;
+  }
+
+  .title-date {
+    font-size: 6px !important;
+
+  }
+
+  .title-text {
+    font-size: 8px !important;
+  }
+
+}
+
+/* TradefairPopup.css */
+.tradefair-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 999;
+  padding: 40px;
+  pointer-events: auto;
+}
+
+.tradefair-popup-container {
+  position: relative;
+  background: #2a2a2a;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  /* max-width: 480px; */
+  width: 100%;
+  max-width: 480px;
+  padding:  45px 40px;
+  animation: popupSlideIn 0.4s ease-out;
+  border: 1px solid #404040;
+}
+
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tradefair-popup-close {
+  position: absolute !important;
+  top: 12px;
+  right: 12px;
+  border-radius: 8px !important;
+  border: #ff6b35 1px solid !important;
+  width: 30px !important;
+  height: 30px !important;
+  transition: all 0.3s ease !important;
+  color: #ff6b35 !important;
+}
+
+.tradefair-popup-close:hover {
+  background-color: rgba(255, 107, 53, 0.2) !important;
+  transform: scale(1.1);
+}
+
+.tradefair-popup-content {
+  text-align: left;
+}
+
+.tradefair-popup-title {
+  margin-bottom: 24px !important;
+  color: #ffffff;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  font-size: 2rem !important;
+  text-align: left !important;
+}
+
+.tradefair-popup-description {
+  margin-bottom: 20px !important;
+  color: #cccccc;
+  line-height: 1.5 !important;
+  font-size: 1rem !important;
+  text-align: left !important;
+}
+
+.tradefair-popup-offer {
+  margin-bottom: 32px !important;
+  color: #ffffff;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  text-align: left !important;
+}
+
+.tradefair-popup-button-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tradefair-popup-button {
+  background: #ffffff;
+  color: #2a2a2a;
+  border: none;
+  padding: 16px 28px;
+  border-radius: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  min-width: 120px;
+}
+
+.tradefair-popup-button:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .tradefair-popup-overlay {
+    padding: 16px;
+  }
+  
+  .tradefair-popup-container {
+    padding: 40px 24px;
+    max-width: 90%;
+  }
+  
+  .tradefair-popup-title {
+    font-size: 1.6rem !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .tradefair-popup-description {
+    font-size: 0.9rem !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .tradefair-popup-offer {
+    font-size: 0.85rem !important;
+    margin-bottom: 28px !important;
+  }
+  
+  .tradefair-popup-button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 468px) {
+  .tradefair-popup-overlay {
+    padding: 16px;
+  }
+  
+  .tradefair-popup-container {
+    padding: 40px 14px;
+    /* max-width: 90%; */
+    padding-bottom: 20px ;
+
+}
+}
