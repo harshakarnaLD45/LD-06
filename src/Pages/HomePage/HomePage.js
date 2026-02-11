@@ -126,6 +126,7 @@ const HomePage = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          boxSizing: 'border-box',
           height: '100vh',
           width: '100%'
         }}>
@@ -152,6 +153,7 @@ const HomePage = () => {
           mt: { xs: -14, md: -12, xl: -18 },
           width: "100%",
           display: 'flex',
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: 'center',
 
@@ -168,22 +170,23 @@ const HomePage = () => {
 
             maxWidth: "582px",
             height: "auto",
-            maxHeight: "80vh",
+            maxHeight: "60vh",
             objectFit: "contain",
             display: "block",
           }}
 
         />
-      </Box>
-
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', width: { xs: "50%", sm: "70%", md: "45%", lg: "35%", xl: "50%", }, }}>
         <img
           src={FooterLogo}
           alt="logo"
-          style={{ width: '90%', maxWidth: '1200px', height: 'auto' }}
+          style={{
+            width: "92%",
+            maxWidth: { xs: "200px", sm: "300px", md: "300px", lg: "300px", xl: "300px", }, 
+            height:  "100%",}}
         />
       </div>
-
+      </Box>
       <HomepageShowreel />
       <Explore />
       {/* <NafApp /> */}

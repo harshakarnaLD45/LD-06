@@ -141,7 +141,7 @@ const Profile = ({ data = {}, onUpdate }) => {
         try {
             const token = localStorage.getItem("authToken");
 
-            await axios.post(
+             await axios.post(
                 `https://staging-api.naf-cloudsystem.de/api/membership-cards/change-email/send-otp?memberId=${formData.id}&newEmail=${encodeURIComponent(formData.newEmail)}`,
                 {},
                 { headers: { Authorization: `Bearer ${token}` } }
@@ -186,45 +186,89 @@ const Profile = ({ data = {}, onUpdate }) => {
             return;
         }
 
+        if (formData.verificationCode.length !== 6) {
+            setSnackbar({
+                open: true,
+                message: t("membership.msg_verification_code_6_digits"),
+                severity: "error",
+            });
+            return;
+        }
+
         try {
             const token = localStorage.getItem("authToken");
             const newEmailValue = formData.newEmail;
 
-            await axios.post(
+            const response = await axios.post(
                 `https://staging-api.naf-cloudsystem.de/api/membership-cards/change-email/verify-otp?memberId=${formData.id}&newEmail=${encodeURIComponent(formData.newEmail)}&otp=${formData.verificationCode}`,
                 {},
                 { headers: { Authorization: `Bearer ${token}` } }
             );
 
-            // Update the email and clear the email change fields atomically
-            setFormData(prev => ({
-                ...prev,
-                email: newEmailValue,
-                newEmail: "",
-                verificationCode: ""
-            }));
+            // Properly validate the response
+            if (response.status === 200 && response.data) {
+                // Check if verification was successful based on response
+                const isVerified = response.data.success || response.data.verified || response.data.message?.toLowerCase().includes('success');
+                
+                if (!isVerified && response.data.success === false) {
+                    // Backend explicitly rejected the code
+                    setSnackbar({
+                        open: true,
+                        message: t("membership.msg_verification_failed"),
+                        severity: "error",
+                    });
+                    return;
+                }
 
-            setEmailChangeSuccess(true);
-            setEmailChangeStep('idle');
+                // Update the email and clear the email change fields atomically
+                setFormData(prev => ({
+                    ...prev,
+                    email: newEmailValue,
+                    newEmail: "",
+                    verificationCode: ""
+                }));
 
-            // Collapse the email change accordion
-            setEmailAccordionExpanded(false);
+                setEmailChangeSuccess(true);
+                setEmailChangeStep('idle');
 
-            setSnackbar({
-                open: true,
-                message: t("membership.msg_email_changed_success"),
-                severity: "success",
-            });
+                // Collapse the email change accordion
+                setEmailAccordionExpanded(false);
 
-            // Update parent component if onUpdate is provided
-            if (onUpdate) onUpdate({ ...formData, email: newEmailValue });
+                setSnackbar({
+                    open: true,
+                    message: t("membership.msg_email_changed_success"),
+                    severity: "success",
+                });
+
+                // Update parent component if onUpdate is provided
+                if (onUpdate) onUpdate({ ...formData, email: newEmailValue });
+            } else {
+                // Unexpected response format
+                setSnackbar({
+                    open: true,
+                    message: t("membership.msg_verification_failed"),
+                    severity: "error",
+                });
+            }
         } catch (error) {
             console.error("Error verifying OTP:", error);
-            setSnackbar({
-                open: true,
-                message: t("membership.msg_verification_failed"),
-                severity: "error",
-            });
+            
+            // Check if error response contains specific validation error
+            const errorMessage = error.response?.data?.message || error.response?.data?.error;
+            
+            if (errorMessage && (errorMessage.toLowerCase().includes('invalid') || errorMessage.toLowerCase().includes('incorrect') || errorMessage.toLowerCase().includes('expired'))) {
+                setSnackbar({
+                    open: true,
+                    message: t("membership.msg_error_verifying_code"),
+                    severity: "error",
+                });
+            } else {
+                setSnackbar({
+                    open: true,
+                    message: t("membership.InvalidCode"),
+                    severity: "error",
+                });
+            }
             // Stay in otpSent state to allow retry
         }
     };
@@ -425,6 +469,15 @@ const Profile = ({ data = {}, onUpdate }) => {
             setSnackbar({
                 open: true,
                 message: t("membership.msg_enter_verification_code"),
+                severity: "error",
+            });
+            return;
+        }
+
+        if (formData.verificationCode.length !== 6) {
+            setSnackbar({
+                open: true,
+                message: t("membership.msg_verification_code_6_digits"),
                 severity: "error",
             });
             return;
@@ -906,6 +959,7 @@ const Profile = ({ data = {}, onUpdate }) => {
                                             // Clear error when user types
                                             if (otpError) setOtpError('');
                                         }}
+                                        inputProps={{ maxLength: 6, digitOnly: true }}
 
                                         error={!!otpError}
                                         helperText={otpError}
@@ -1164,12 +1218,19 @@ const Profile = ({ data = {}, onUpdate }) => {
                 open={snackbar.open}
                 autoHideDuration={3000}
                 onClose={handleCloseSnackbar}
-                anchorOrigin={{ vertical: "top", horizontal: "right" }}
+                anchorOrigin={{ vertical: "top", horizontal: "center" }}
             >
                 <Alert
                     onClose={handleCloseSnackbar}
                     severity={snackbar.severity}
-                    sx={{ width: "100%" }}
+                    sx={{ 
+                        width: "100%",
+                        color: snackbar.severity === "success" ? "#21CD83" : 
+                              snackbar.severity === "error" ? "red" : 
+                              snackbar.severity === "warning" ? "orange" : 
+                              "info.main",
+                              backgroundColor: "#2a2a2a"
+                    }}
                 >
                     {snackbar.message}
                 </Alert>

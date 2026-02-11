@@ -116,7 +116,7 @@ function Membership() {
             } else {
                 {/*handleSendVerificationCode()*/ }
                 setStep(22);
-                setSnackbar({ open: true, message: t("membership.msg_email_not_found"), severity: "warning" });
+                setSnackbar({ open: true, message: t("membership.msg_email_not_found"), severity: "error" });
             }
         } catch (error) {
             setSnackbar({ open: true, message: t("membership.msg_error_checking_email"), severity: "error" });
@@ -153,7 +153,7 @@ function Membership() {
                     // Email already verified but user not signed up
                     setEmailVerified(true);
                     setStep(3); // 👉 go directly to signup
-                    setSnackbar({ open: true, message: t("membership.msg_email_verified"), severity: "error" });
+                    setSnackbar({ open: true, message: t("membership.msg_email_verified"), severity: "success" });
                     return;
                 }
                 setSnackbar({ open: true, message: t("membership.msg_error_sending_code"), severity: "error" });
@@ -166,7 +166,7 @@ function Membership() {
                 // Email already verified but user not signed up
                 setEmailVerified(true);
                 setStep(3); // 👉 go directly to signup
-                setSnackbar({ open: true, message: t("membership.msg_email_verified"), severity: "error" });
+                setSnackbar({ open: true, message: t("membership.msg_email_verified"), severity: "success" });
                 return;
             }
             setSnackbar({ open: true, message: t("membership.msg_error_sending_code"), severity: "error" });
@@ -180,6 +180,13 @@ function Membership() {
         // Clear previous errors
         setVerificationCodeError("");
 
+        // Check if verify button was clicked first
+        if (!verifyButtonClicked) {
+            setSnackbar({ open: true, message: t("membership.msg_click_verify_first"), severity: "error" });
+            return;
+        }
+
+        // Check if verification code was entered
         if (!verificationCode || verificationCode.length === 0) {
             setVerificationCodeError(t("membership.msg_enter_verification_code"));
             setSnackbar({ open: true, message: t("membership.msg_enter_verification_code"), severity: "error" });
@@ -1164,7 +1171,14 @@ function Membership() {
                 <Alert
                     onClose={() => setSnackbar({ ...snackbar, open: false })}
                     severity={snackbar.severity}
-                    sx={{ width: "100%" }}
+                    sx={{ 
+                        width: "100%",
+                        color: snackbar.severity === "success" ? "#21CD83" : 
+                              snackbar.severity === "error" ? "red" : 
+                              snackbar.severity === "warning" ? "orange" : 
+                              "info.main",
+                              backgroundColor: "#2a2a2a"
+                    }}
                 >
                     {snackbar.message}
                 </Alert>

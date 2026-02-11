@@ -79,10 +79,10 @@ export default function PizzaVendingMachine() {
   };
 
   const faqData = [
-    {
-      question: t('products.gourmetMachine.faq.question1'),
-      answer: t('products.gourmetMachine.faq.answer1')
-    },
+    // {
+    //   question: t('products.gourmetMachine.faq.question1'),
+    //   answer: t('products.gourmetMachine.faq.answer1')
+    // },
     {
       question: t('products.gourmetMachine.faq.question2'),
       answer: t('products.gourmetMachine.faq.answer2')

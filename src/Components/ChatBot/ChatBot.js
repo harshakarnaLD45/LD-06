@@ -18,6 +18,8 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
+import { cleanMarkdownFormatting } from './messageFormatter';
+import { parseHtmlToReact } from './htmlParser';
 import Boticon from '../../assets/Chatbot/ai_bot_icon.svg';
 import Userperson from '../../assets/Chatbot/person_icon.svg';
 import InputIcon from '../../assets/Chatbot/Chat_send_icon.svg';
@@ -158,6 +160,23 @@ const NAFChatbot = () => {
           preferredLanguage: currentLanguage,
           source: 'naf_website'
         }
+        // ,
+        // formattingInstructions: {
+        //   responseFormat: 'structured',
+        //   rules: [
+        //     'Use ordered lists (1., 2., 3.) for primary sections, main points, or sequential steps',
+        //     'Use bullet points (-) exclusively for sub-items under numbered points',
+        //     'Each numbered item must begin on its own line with proper indentation',
+        //     'Never combine numbered points and bullet points on the same line',
+        //     'Maintain consistent indentation (numbered at base, bullets indented)',
+        //     'Prohibit duplicate numbering in the same list',
+        //     'Eliminate inline decorative symbols within paragraph text',
+        //     'Keep sentences concise for chat interface readability',
+        //     'Structure content vertically for easy scrolling',
+        //     'Present information in logical, progressive order',
+        //     'Group related sub-topics under appropriate main headings'
+        //   ]
+        // }
       };
 
       console.log('Sending message with language context:', {
@@ -202,7 +221,7 @@ const NAFChatbot = () => {
 
     const botMessage = {
       id: `bot_${Date.now()}`,
-      text: botResponse,
+      text: cleanMarkdownFormatting(botResponse),
       sender: 'bot',
       timestamp: new Date(),
     };
@@ -509,7 +528,7 @@ const NAFChatbot = () => {
                         display: 'flex',
                         alignItems: 'flex-start',
 
-                        gap: 1,
+                        gap: 0,
                         maxWidth: '95%',
                         flexDirection: message.sender === 'user' ? 'row' : 'row-reverse',
                       }}
@@ -535,14 +554,17 @@ const NAFChatbot = () => {
                         <Typography className="bodyMediumText3"
                           variant="body2"
                           sx={{
-                            fontSize: 14,
-                            lineHeight: 1.6,
                             whiteSpace: 'pre-wrap',
                             color: '#FCFCFC',
                             wordBreak: 'break-word',
                           }}
                         >
-                          {message.text}
+                          {message.sender === 'bot' && message.text.includes('<') ? 
+                            <div style={{ fontSize: 14, lineHeight: 1.2, whiteSpace: 'pre-wrap', margin: '0px' }}>
+                              {parseHtmlToReact(message.text)}
+                            </div> : 
+                            message.text
+                          }
                         </Typography>
                       </Box>
 

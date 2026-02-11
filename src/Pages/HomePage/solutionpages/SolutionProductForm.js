@@ -90,16 +90,16 @@ const SolutionProductForm = () => {
   const location = useLocation();
 
   // Extract current page/segment from URL
- const extractUseCaseFromUrl = () => {
-  const segments = location.pathname.split("/").filter(Boolean);
+  const extractUseCaseFromUrl = () => {
+    const segments = location.pathname.split("/").filter(Boolean);
 
-  for (const segment of segments) {
-    if (urlToUseCaseMap[segment]) {
-      return urlToUseCaseMap[segment];
+    for (const segment of segments) {
+      if (urlToUseCaseMap[segment]) {
+        return urlToUseCaseMap[segment];
+      }
     }
-  }
-  return "";
-};
+    return "";
+  };
 
 
   const [formData, setFormData] = useState({
@@ -120,17 +120,17 @@ const SolutionProductForm = () => {
 
 
   // Set use case based on URL when component mounts
- useEffect(() => {
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
 
-  const useCaseFromUrl = extractUseCaseFromUrl();
-  if (useCaseFromUrl) {
-    setFormData(prev => ({
-      ...prev,
-      useCaseType: useCaseFromUrl,
-    }));
-  }
-}, [location.pathname]);
+    const useCaseFromUrl = extractUseCaseFromUrl();
+    if (useCaseFromUrl) {
+      setFormData(prev => ({
+        ...prev,
+        useCaseType: useCaseFromUrl,
+      }));
+    }
+  }, [location.pathname]);
 
 
   /* =========================
@@ -270,31 +270,17 @@ const SolutionProductForm = () => {
     setIsSubmitting(true);
 
     try {
-      const fields = [
-        { label: "Use Case", value: formData.useCaseType },
-        { label: "Name", value: formData.fullName },
-        { label: "Email", value: formData.email },
-        { label: "Phone", value: formData.phone },
-        { label: "Company", value: formData.company },
-        { label: "Accepted Policy", value: formData.acceptedPolicy ? "Yes" : "No" },
-      ];
-
-      const formDataTable = `
-<table style="width:100%; border-collapse:collapse; font-family:Arial,sans-serif;">
-        ${fields.map(f => `
-<tr>
-<td style="border:1px solid #ddd; font-weight:bold; padding:8px;">${f.label}</td>
-<td style="border:1px solid #ddd; padding:8px;">${f.value || ""}</td>
-</tr>`).join('')}
-</table>
-    `;
-
       await emailjs.send(
         "service_m9cjyf7",
         "template_ka6dtns",
         {
           form_type: "General Enquiry",
-          form_data: formDataTable,
+          use_case: formData.useCaseType || "",
+          full_name: formData.fullName || "",
+          email: formData.email || "",
+          phone: formData.phone || "",
+          company: formData.company || "",
+          accepted_policy: formData.acceptedPolicy ? "Yes" : "No",
           time: new Date().toLocaleString(),
         },
         "oohP8NNTJgl2SPoOz"
@@ -302,7 +288,7 @@ const SolutionProductForm = () => {
       setShowSuccess(true);
       setIsSubmitting(false);
     } catch (err) {
-       alert(t(`validation.submissionFailed`));
+      alert(t(`validation.submissionFailed`));
       setIsSubmitting(false);
     }
   };
@@ -325,9 +311,6 @@ const SolutionProductForm = () => {
     setShowSuccess(false);
   };
 
-  /* =========================
-     SUCCESS STATE
-  ========================= */
   if (showSuccess) {
     return (
       <Box className="section-container"
@@ -436,39 +419,39 @@ const SolutionProductForm = () => {
       <Box component="form" onSubmit={handleSubmit} noValidate>
         {/* Select Use Case Type - Now pre-selected based on URL */}
         <FormControl fullWidth variant="standard" sx={{ mb: 3, ...standardInputStyle }}>
-  <Select
-    name="useCaseType"
-    value={formData.useCaseType}
-    onChange={handleChange}
-    onBlur={() => handleBlur("useCaseType")}
-    displayEmpty
-    error={touched.useCaseType && !!formErrors.useCaseType}
-    renderValue={(val) => {
-      if (!val) {
-        return (
-          <span style={{ color: "#c2c2c4" }}>
-            {t("solutionsProductForm.form.selectUseCase")}
-          </span>
-        );
-      }
-      return t(`solutionsProductForm.useCases.${val}`);
-    }}
-  >
-    <MenuItem value="" disabled>
-      <em>{t("solutionsProductForm.form.selectUseCase")}</em>
-    </MenuItem>
+          <Select
+            name="useCaseType"
+            value={formData.useCaseType}
+            onChange={handleChange}
+            onBlur={() => handleBlur("useCaseType")}
+            displayEmpty
+            error={touched.useCaseType && !!formErrors.useCaseType}
+            renderValue={(val) => {
+              if (!val) {
+                return (
+                  <span style={{ color: "#c2c2c4" }}>
+                    {t("solutionsProductForm.form.selectUseCase")}
+                  </span>
+                );
+              }
+              return t(`solutionsProductForm.useCases.${val}`);
+            }}
+          >
+            <MenuItem value="" disabled>
+              <em>{t("solutionsProductForm.form.selectUseCase")}</em>
+            </MenuItem>
 
-    {USE_CASE_OPTIONS.map((item) => (
-      <MenuItem key={item} value={item}>
-        {t(`solutionsProductForm.useCases.${item}`)}
-      </MenuItem>
-    ))}
-  </Select>
+            {USE_CASE_OPTIONS.map((item) => (
+              <MenuItem key={item} value={item}>
+                {t(`solutionsProductForm.useCases.${item}`)}
+              </MenuItem>
+            ))}
+          </Select>
 
-  {touched.useCaseType && formErrors.useCaseType && (
-    <FormHelperText error>{formErrors.useCaseType}</FormHelperText>
-  )}
-</FormControl>
+          {touched.useCaseType && formErrors.useCaseType && (
+            <FormHelperText error>{formErrors.useCaseType}</FormHelperText>
+          )}
+        </FormControl>
 
 
         {/* Email Field */}
@@ -627,7 +610,7 @@ const SolutionProductForm = () => {
                 },
               }}
             >
-             {t("validation.submitting")}
+              {t("validation.submitting")}
             </Button>
           ) : (
             <div onClick={handleSubmit} style={{ cursor: "pointer" }}>
